@@ -1,0 +1,21 @@
+name: Verify portfolio project
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Rebuild example report
+        run: python linkscope.py --input samples/link_telemetry.csv --output reports
+      - name: Verify generated report exists
+        run: test -f reports/link-health-report.html

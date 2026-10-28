@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative AI-rack link-health observation path</title>
+  <desc id="desc">Four accelerator endpoints connect to two fabric switches. LinkScope consumes sanitized link telemetry and produces a readable report.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#f7f8fc"/><stop offset="1" stop-color="#f0edff"/></linearGradient>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-opacity=".12"/></filter>
+    <style>
+      .title{font:700 28px system-ui,sans-serif;fill:#172235}.label{font:600 16px system-ui,sans-serif;fill:#172235}.small{font:14px system-ui,sans-serif;fill:#64748b}.node{fill:#fff;stroke:#dbe3ed;stroke-width:2}.switch{fill:#2e215f;stroke:#2e215f}.link{fill:none;stroke:#91a0b7;stroke-width:4}.hot{fill:none;stroke:#e68d20;stroke-width:4}.bad{fill:none;stroke:#d94c4c;stroke-width:4}.pill{font:700 12px system-ui,sans-serif;fill:#fff}
+    </style>
+  </defs>
+  <rect width="1200" height="620" rx="24" fill="url(#bg)"/>
+  <text x="70" y="70" class="title">Illustrative AI-rack telemetry flow</text>
+  <text x="70" y="99" class="small">A documentation diagram: raw counters become a decision-oriented report.</text>
+  <path d="M350 180 C470 180 475 225 585 225" class="link"/><path d="M350 300 C470 300 475 225 585 225" class="hot"/>
+  <path d="M350 420 C470 420 475 395 585 395" class="bad"/><path d="M350 540 C470 540 475 395 585 395" class="link"/>
+  <g filter="url(#shadow)"><rect x="95" y="140" width="255" height="80" rx="14" class="node"/><rect x="95" y="260" width="255" height="80" rx="14" class="node"/><rect x="95" y="380" width="255" height="80" rx="14" class="node"/><rect x="95" y="500" width="255" height="80" rx="14" class="node"/></g>
+  <text x="120" y="174" class="label">Accelerator 01</text><text x="120" y="199" class="small">FAB-01 · healthy baseline</text>
+  <text x="120" y="294" class="label">Accelerator 02</text><text x="120" y="319" class="small">FAB-02 · observe margin</text>
+  <text x="120" y="414" class="label">Accelerator 03</text><text x="120" y="439" class="small">FAB-03 · investigate BER</text>
+  <text x="120" y="534" class="label">Accelerator 04</text><text x="120" y="559" class="small">FAB-04 · investigate errors</text>
+  <g filter="url(#shadow)"><rect x="585" y="170" width="210" height="110" rx="16" class="switch"/><rect x="585" y="340" width="210" height="110" rx="16" class="switch"/></g>
+  <text x="620" y="214" class="pill">FABRIC SWITCH 01</text><text x="620" y="242" class="pill" opacity=".72">Sanitized counters</text>
+  <text x="620" y="384" class="pill">FABRIC SWITCH 02</text><text x="620" y="412" class="pill" opacity=".72">Sanitized counters</text>
+  <path d="M795 225 C855 225 840 310 915 310" class="link"/><path d="M795 395 C855 395 840 310 915 310" class="link"/>
+  <g filter="url(#shadow)"><rect x="915" y="190" width="215" height="245" rx="18" fill="#fff" stroke="#dbe3ed" stroke-width="2"/></g>
+  <text x="945" y="235" class="label">LinkScope</text><text x="945" y="262" class="small">CSV input</text><line x1="945" y1="281" x2="1100" y2="281" stroke="#dbe3ed"/>
+  <text x="945" y="313" class="small">1. Explain score</text><text x="945" y="342" class="small">2. Prioritize action</text><text x="945" y="371" class="small">3. Publish report</text>
+  <rect x="945" y="390" width="104" height="25" rx="12" fill="#ede9fe"/><text x="960" y="408" style="font:700 12px system-ui,sans-serif;fill:#5c39c8">HTML + Markdown</text>
+  <rect x="370" y="282" width="84" height="24" rx="12" fill="#fff1d7"/><text x="386" y="299" style="font:700 11px system-ui,sans-serif;fill:#925b00">Observe</text>
+  <rect x="424" y="402" width="100" height="24" rx="12" fill="#ffebeb"/><text x="439" y="419" style="font:700 11px system-ui,sans-serif;fill:#a82626">Investigate</text>
+</svg>
